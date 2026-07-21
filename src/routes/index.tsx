@@ -31,8 +31,18 @@ export const Route = createFileRoute("/")({
   component: Portfolio,
 });
 
-const EMAIL = "saumya@shekhar.model";
+const EMAIL = "shekhar.saumya27@gmail.com";
+const WHATSAPP = "https://wa.me/917843031847";
 const INSTA = "https://www.instagram.com/_saumyashekhar__?igsh=ODUwYXZkMzF6bDgx";
+
+// Inline WhatsApp glyph (kept minimal, on-brand)
+function WhatsAppIcon({ className = "h-4 w-4" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className={className}>
+      <path d="M12.04 2.5c-5.25 0-9.5 4.25-9.5 9.5 0 1.67.44 3.29 1.28 4.72L2.5 21.5l4.94-1.29a9.47 9.47 0 0 0 4.6 1.18h.01c5.24 0 9.49-4.25 9.49-9.5 0-2.54-.99-4.92-2.78-6.71A9.42 9.42 0 0 0 12.04 2.5Zm0 17.33h-.01a7.86 7.86 0 0 1-4.01-1.1l-.29-.17-2.93.77.78-2.86-.19-.29a7.87 7.87 0 0 1-1.21-4.19c0-4.36 3.55-7.9 7.91-7.9 2.11 0 4.1.82 5.59 2.32a7.85 7.85 0 0 1 2.32 5.6c0 4.35-3.55 7.82-7.96 7.82Zm4.54-5.87c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.98-.14.16-.29.18-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.13-.14.16-.25.25-.41.08-.16.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42-.14 0-.31-.02-.48-.02s-.44.06-.67.31c-.23.25-.87.85-.87 2.08 0 1.23.89 2.41 1.01 2.58.13.16 1.75 2.67 4.24 3.74.59.25 1.05.4 1.41.52.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.08.15-1.18-.06-.11-.23-.17-.48-.29Z"/>
+    </svg>
+  );
+}
 
 const galleryItems = [
   { src: p3Asset.url, category: "Editorial", tall: true },
@@ -248,15 +258,15 @@ function Portfolio() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-transparent to-black/40" />
 
         {/* Content */}
-        <div className="relative z-10 h-full flex flex-col justify-end pb-24 md:pb-32">
+        <div className="relative z-10 h-full flex flex-col justify-end pb-28 md:pb-36">
           <div className="mx-auto w-full max-w-7xl px-6 md:px-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 1.8 }}
-              className="mb-6"
+              className="mb-5 md:mb-6"
             >
-              <SectionLabel>Portfolio · 2026</SectionLabel>
+              <SectionLabel>Portfolio — MMXXVI</SectionLabel>
             </motion.div>
 
             <div className="overflow-hidden">
@@ -264,7 +274,7 @@ function Portfolio() {
                 initial={{ y: "110%" }}
                 animate={{ y: "0%" }}
                 transition={{ duration: 1.1, delay: 1.9, ease: [0.22, 1, 0.36, 1] }}
-                className="font-display text-[18vw] md:text-[10vw] leading-[0.85] font-light uppercase"
+                className="font-display text-[17vw] md:text-[10vw] leading-[0.85] font-light uppercase tracking-[-0.02em]"
               >
                 Saumya
               </motion.h1>
@@ -274,7 +284,7 @@ function Portfolio() {
                 initial={{ y: "110%" }}
                 animate={{ y: "0%" }}
                 transition={{ duration: 1.1, delay: 2.05, ease: [0.22, 1, 0.36, 1] }}
-                className="font-display text-[18vw] md:text-[10vw] leading-[0.85] font-light uppercase italic text-white/95"
+                className="font-display text-[17vw] md:text-[10vw] leading-[0.85] font-light uppercase italic text-white/95 tracking-[-0.02em]"
               >
                 Shekhar
               </motion.h1>
@@ -284,19 +294,19 @@ function Portfolio() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 2.4 }}
-              className="mt-8 max-w-xl"
+              className="mt-7 md:mt-9 max-w-xl"
             >
               <div className="flex items-center gap-3">
-                <span className="h-px w-10 bg-gold" />
-                <p className="text-xs md:text-sm tracking-[0.35em] uppercase text-white/85">
-                  Professional Fashion Model
+                <span className="h-px w-8 md:w-10 bg-gold" />
+                <p className="text-[10px] md:text-xs tracking-[0.4em] uppercase text-white/85">
+                  Fashion Model
                 </p>
               </div>
-              <p className="mt-3 text-[11px] tracking-[0.4em] uppercase text-white/50">
-                Commercial · Print · Editorial
+              <p className="mt-3 text-[10px] md:text-[11px] tracking-[0.45em] uppercase text-white/45">
+                Editorial · Campaign · Runway
               </p>
-              <p className="mt-6 text-sm md:text-base text-white/70 leading-relaxed max-w-md font-light">
-                Available for fashion campaigns, commercial shoots and brand collaborations worldwide.
+              <p className="mt-5 md:mt-6 text-[13px] md:text-base text-white/65 leading-relaxed max-w-md font-light">
+                A study in stillness and form — represented for campaigns, couture and worldwide collaborations.
               </p>
             </motion.div>
 
@@ -304,11 +314,16 @@ function Portfolio() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 2.6 }}
-              className="mt-10 flex flex-wrap gap-3"
+              className="mt-8 md:mt-10 flex flex-wrap items-center gap-2.5 md:gap-3"
             >
               <LuxButton primary onClick={() => scrollTo("contact")}>Book Now</LuxButton>
-              <LuxButton onClick={() => scrollTo("contact")}>Contact</LuxButton>
-              <LuxButton onClick={() => scrollTo("portfolio")}>View Portfolio</LuxButton>
+              <LuxButton
+                onClick={() => window.open(WHATSAPP, "_blank", "noopener,noreferrer")}
+                icon={<WhatsAppIcon className="h-3.5 w-3.5" />}
+              >
+                WhatsApp
+              </LuxButton>
+              <LuxButton onClick={() => scrollTo("portfolio")}>Portfolio</LuxButton>
             </motion.div>
           </div>
         </div>
@@ -514,28 +529,32 @@ function Portfolio() {
         <div className="mx-auto max-w-5xl text-center">
           <Reveal><div className="flex justify-center"><SectionLabel>05 — Contact</SectionLabel></div></Reveal>
           <Reveal delay={0.05}>
-            <h2 className="mt-8 font-display text-6xl md:text-9xl font-light leading-[0.9]">
-              Book <span className="italic text-gold">Me</span>
+            <h2 className="mt-8 font-display text-5xl sm:text-6xl md:text-9xl font-light leading-[0.9]">
+              Let's <span className="italic text-gold">Create</span>
             </h2>
           </Reveal>
           <Reveal delay={0.15}>
-            <p className="mt-8 text-white/60 max-w-lg mx-auto font-light">
-              For campaigns, editorials and brand collaborations — reach out directly. Response within 24 hours.
+            <p className="mt-8 text-sm md:text-base text-white/55 max-w-md mx-auto font-light leading-relaxed">
+              For campaigns, editorials and collaborations — enquiries answered within 24 hours.
             </p>
           </Reveal>
 
           <Reveal delay={0.25}>
             <div className="mt-12 inline-flex flex-col items-center">
-              <div className="text-[10px] tracking-luxury text-gold">Direct email</div>
-              <a href={`mailto:${EMAIL}`} className="mt-3 font-display text-2xl md:text-5xl text-white hover:text-gold transition-colors break-all">
+              <div className="text-[10px] tracking-luxury text-gold">Direct enquiries</div>
+              <a
+                href={`mailto:${EMAIL}`}
+                className="mt-3 font-display text-2xl sm:text-3xl md:text-5xl text-white hover:text-gold transition-colors break-all"
+              >
                 {EMAIL}
               </a>
             </div>
           </Reveal>
 
           <Reveal delay={0.35}>
-            <div className="mt-14 flex flex-wrap justify-center gap-3">
-              <ContactBtn href={`mailto:${EMAIL}`} icon={<Mail className="h-4 w-4" />} label="Email Me" primary />
+            <div className="mt-12 md:mt-14 flex flex-wrap justify-center gap-2.5 md:gap-3">
+              <ContactBtn href={`mailto:${EMAIL}`} icon={<Mail className="h-4 w-4" />} label="Email" primary />
+              <ContactBtn href={WHATSAPP} icon={<WhatsAppIcon className="h-4 w-4" />} label="WhatsApp" />
               <ContactBtn href={INSTA} icon={<Instagram className="h-4 w-4" />} label="Instagram" />
             </div>
           </Reveal>
@@ -620,22 +639,25 @@ function LuxButton({
   children,
   onClick,
   primary,
+  icon,
 }: {
   children: React.ReactNode;
   onClick?: () => void;
   primary?: boolean;
+  icon?: React.ReactNode;
 }) {
   return (
     <motion.button
       whileHover={{ y: -2 }}
       whileTap={{ scale: 0.98 }}
       onClick={onClick}
-      className={`group relative overflow-hidden rounded-full px-7 py-3.5 text-[11px] tracking-luxury transition-all duration-500 ${
+      className={`group relative inline-flex items-center gap-2 overflow-hidden rounded-full px-6 md:px-7 py-3 md:py-3.5 text-[10.5px] md:text-[11px] tracking-luxury transition-all duration-500 ${
         primary
           ? "bg-gold text-black hover:gold-glow"
           : "border border-white/20 text-white hover:border-gold/60 hover:text-gold"
       }`}
     >
+      {icon && <span className="relative z-10">{icon}</span>}
       <span className="relative z-10">{children}</span>
     </motion.button>
   );
