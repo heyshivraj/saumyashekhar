@@ -635,22 +635,25 @@ function LuxButton({
   children,
   onClick,
   primary,
+  icon,
 }: {
   children: React.ReactNode;
   onClick?: () => void;
   primary?: boolean;
+  icon?: React.ReactNode;
 }) {
   return (
     <motion.button
       whileHover={{ y: -2 }}
       whileTap={{ scale: 0.98 }}
       onClick={onClick}
-      className={`group relative overflow-hidden rounded-full px-7 py-3.5 text-[11px] tracking-luxury transition-all duration-500 ${
+      className={`group relative inline-flex items-center gap-2 overflow-hidden rounded-full px-6 md:px-7 py-3 md:py-3.5 text-[10.5px] md:text-[11px] tracking-luxury transition-all duration-500 ${
         primary
           ? "bg-gold text-black hover:gold-glow"
           : "border border-white/20 text-white hover:border-gold/60 hover:text-gold"
       }`}
     >
+      {icon && <span className="relative z-10">{icon}</span>}
       <span className="relative z-10">{children}</span>
     </motion.button>
   );
