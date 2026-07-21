@@ -19,30 +19,30 @@ import {
   ChevronDown,
 } from "lucide-react";
 
-import hero from "@/assets/hero.jpg";
-import g1 from "@/assets/g1.jpg";
-import g2 from "@/assets/g2.jpg";
-import g3 from "@/assets/g3.jpg";
-import g4 from "@/assets/g4.jpg";
-import g5 from "@/assets/g5.jpg";
-import g6 from "@/assets/g6.jpg";
+import heroAsset from "@/assets/hero.jpg.asset.json";
+import p1Asset from "@/assets/p1.jpg.asset.json";
+import p2Asset from "@/assets/p2.jpg.asset.json";
+import p3Asset from "@/assets/p3.jpg.asset.json";
+import p4Asset from "@/assets/p4.jpg.asset.json";
+import p5Asset from "@/assets/p5.jpg.asset.json";
+import p6Asset from "@/assets/p6.jpg.asset.json";
+
+const hero = heroAsset.url;
 
 export const Route = createFileRoute("/")({
   component: Portfolio,
 });
 
-const PHONE = "7843031847";
-const PHONE_DISPLAY = "+91 78430 31847";
 const EMAIL = "saumya@shekhar.model";
-const INSTA = "https://instagram.com";
+const INSTA = "https://www.instagram.com/_saumyashekhar__?igsh=ODUwYXZkMzF6bDgx";
 
 const galleryItems = [
-  { src: g1, category: "Editorial", tall: true },
-  { src: g2, category: "Commercial", tall: false },
-  { src: g3, category: "Runway", tall: true },
-  { src: g4, category: "Print", tall: false },
-  { src: g5, category: "Fashion", tall: true },
-  { src: g6, category: "Lookbook", tall: false },
+  { src: p3Asset.url, category: "Editorial", tall: true },
+  { src: p2Asset.url, category: "Commercial", tall: false },
+  { src: p1Asset.url, category: "Runway", tall: true },
+  { src: p4Asset.url, category: "Print", tall: false },
+  { src: p6Asset.url, category: "Fashion", tall: true },
+  { src: p5Asset.url, category: "Lookbook", tall: false },
 ];
 
 const measurements = [
