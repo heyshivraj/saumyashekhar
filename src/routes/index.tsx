@@ -9,10 +9,8 @@ import {
   useMotionValue,
 } from "framer-motion";
 import {
-  Phone,
   Mail,
   Instagram,
-  MessageCircle,
   ArrowUpRight,
   ArrowUp,
   X,
