@@ -9,40 +9,38 @@ import {
   useMotionValue,
 } from "framer-motion";
 import {
-  Phone,
   Mail,
   Instagram,
-  MessageCircle,
   ArrowUpRight,
   ArrowUp,
   X,
   ChevronDown,
 } from "lucide-react";
 
-import hero from "@/assets/hero.jpg";
-import g1 from "@/assets/g1.jpg";
-import g2 from "@/assets/g2.jpg";
-import g3 from "@/assets/g3.jpg";
-import g4 from "@/assets/g4.jpg";
-import g5 from "@/assets/g5.jpg";
-import g6 from "@/assets/g6.jpg";
+import heroAsset from "@/assets/hero.jpg.asset.json";
+import p1Asset from "@/assets/p1.jpg.asset.json";
+import p2Asset from "@/assets/p2.jpg.asset.json";
+import p3Asset from "@/assets/p3.jpg.asset.json";
+import p4Asset from "@/assets/p4.jpg.asset.json";
+import p5Asset from "@/assets/p5.jpg.asset.json";
+import p6Asset from "@/assets/p6.jpg.asset.json";
+
+const hero = heroAsset.url;
 
 export const Route = createFileRoute("/")({
   component: Portfolio,
 });
 
-const PHONE = "7843031847";
-const PHONE_DISPLAY = "+91 78430 31847";
 const EMAIL = "saumya@shekhar.model";
-const INSTA = "https://instagram.com";
+const INSTA = "https://www.instagram.com/_saumyashekhar__?igsh=ODUwYXZkMzF6bDgx";
 
 const galleryItems = [
-  { src: g1, category: "Editorial", tall: true },
-  { src: g2, category: "Commercial", tall: false },
-  { src: g3, category: "Runway", tall: true },
-  { src: g4, category: "Print", tall: false },
-  { src: g5, category: "Fashion", tall: true },
-  { src: g6, category: "Lookbook", tall: false },
+  { src: p3Asset.url, category: "Editorial", tall: true },
+  { src: p2Asset.url, category: "Commercial", tall: false },
+  { src: p1Asset.url, category: "Runway", tall: true },
+  { src: p4Asset.url, category: "Print", tall: false },
+  { src: p6Asset.url, category: "Fashion", tall: true },
+  { src: p5Asset.url, category: "Lookbook", tall: false },
 ];
 
 const measurements = [
@@ -508,61 +506,13 @@ function Portfolio() {
         </div>
       </section>
 
-      {/* ================= BRANDS ================= */}
-      <section className="relative py-20 md:py-28 border-y border-white/6 bg-[var(--charcoal)]/40">
-        <Reveal className="mb-8 md:mb-12 px-6 md:px-10 mx-auto max-w-7xl">
-          <SectionLabel>05 — Trusted by</SectionLabel>
-        </Reveal>
-        <div className="relative overflow-hidden">
-          <div className="flex whitespace-nowrap" style={{ animation: "marquee 40s linear infinite" }}>
-            {[...brands, ...brands, ...brands].map((b, i) => (
-              <div key={i} className="flex items-center gap-14 px-7">
-                <span className="font-display text-3xl md:text-5xl text-white/40 tracking-wider hover:text-gold transition-colors duration-500">
-                  {b}
-                </span>
-                <span className="text-gold/40 text-2xl">✦</span>
-              </div>
-            ))}
-          </div>
-          <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background to-transparent" />
-          <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background to-transparent" />
-        </div>
-      </section>
-
-      {/* ================= TESTIMONIALS ================= */}
-      <section className="relative py-28 md:py-40 px-6 md:px-10">
-        <div className="mx-auto max-w-7xl">
-          <Reveal><SectionLabel>06 — Words</SectionLabel></Reveal>
-          <Reveal delay={0.05}>
-            <h2 className="mt-6 font-display text-5xl md:text-7xl font-light leading-[0.95]">
-              Kind <span className="italic text-gold">Words</span>
-            </h2>
-          </Reveal>
-
-          <div className="mt-14 grid md:grid-cols-3 gap-5">
-            {testimonials.map((t, i) => (
-              <Reveal key={i} delay={i * 0.1}>
-                <figure className="glass rounded-xl p-8 md:p-10 h-full flex flex-col justify-between hover:border-gold/30 transition-colors duration-700">
-                  <span className="font-display text-6xl text-gold leading-none">"</span>
-                  <blockquote className="mt-4 font-display text-xl md:text-2xl leading-snug text-white/90 font-light italic">
-                    {t.quote}
-                  </blockquote>
-                  <figcaption className="mt-8 text-[10px] tracking-luxury text-white/50">
-                    — {t.author}
-                  </figcaption>
-                </figure>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <div className="gold-hairline mx-auto max-w-6xl" />
+
 
       {/* ================= CONTACT ================= */}
       <section id="contact" className="relative py-28 md:py-40 px-6 md:px-10">
         <div className="mx-auto max-w-5xl text-center">
-          <Reveal><div className="flex justify-center"><SectionLabel>07 — Contact</SectionLabel></div></Reveal>
+          <Reveal><div className="flex justify-center"><SectionLabel>05 — Contact</SectionLabel></div></Reveal>
           <Reveal delay={0.05}>
             <h2 className="mt-8 font-display text-6xl md:text-9xl font-light leading-[0.9]">
               Book <span className="italic text-gold">Me</span>
@@ -576,22 +526,16 @@ function Portfolio() {
 
           <Reveal delay={0.25}>
             <div className="mt-12 inline-flex flex-col items-center">
-              <div className="text-[10px] tracking-luxury text-gold">Direct line</div>
-              <a href={`tel:${PHONE}`} className="mt-3 font-display text-3xl md:text-5xl text-white hover:text-gold transition-colors">
-                {PHONE_DISPLAY}
+              <div className="text-[10px] tracking-luxury text-gold">Direct email</div>
+              <a href={`mailto:${EMAIL}`} className="mt-3 font-display text-2xl md:text-5xl text-white hover:text-gold transition-colors break-all">
+                {EMAIL}
               </a>
             </div>
           </Reveal>
 
           <Reveal delay={0.35}>
             <div className="mt-14 flex flex-wrap justify-center gap-3">
-              <ContactBtn href={`tel:${PHONE}`} icon={<Phone className="h-4 w-4" />} label="Call Now" primary />
-              <ContactBtn
-                href={`https://wa.me/91${PHONE}`}
-                icon={<MessageCircle className="h-4 w-4" />}
-                label="WhatsApp"
-              />
-              <ContactBtn href={`mailto:${EMAIL}`} icon={<Mail className="h-4 w-4" />} label="Email" />
+              <ContactBtn href={`mailto:${EMAIL}`} icon={<Mail className="h-4 w-4" />} label="Email Me" primary />
               <ContactBtn href={INSTA} icon={<Instagram className="h-4 w-4" />} label="Instagram" />
             </div>
           </Reveal>
@@ -608,11 +552,8 @@ function Portfolio() {
             © {new Date().getFullYear()} — All Rights Reserved
           </div>
           <div className="flex items-center gap-3 order-2 md:order-3">
-            <a href={INSTA} className="glass h-9 w-9 rounded-full flex items-center justify-center hover:border-gold/50 transition-colors">
+            <a href={INSTA} target="_blank" rel="noopener noreferrer" className="glass h-9 w-9 rounded-full flex items-center justify-center hover:border-gold/50 transition-colors">
               <Instagram className="h-3.5 w-3.5" />
-            </a>
-            <a href={`https://wa.me/91${PHONE}`} className="glass h-9 w-9 rounded-full flex items-center justify-center hover:border-gold/50 transition-colors">
-              <MessageCircle className="h-3.5 w-3.5" />
             </a>
             <a href={`mailto:${EMAIL}`} className="glass h-9 w-9 rounded-full flex items-center justify-center hover:border-gold/50 transition-colors">
               <Mail className="h-3.5 w-3.5" />
