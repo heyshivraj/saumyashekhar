@@ -508,56 +508,8 @@ function Portfolio() {
         </div>
       </section>
 
-      {/* ================= BRANDS ================= */}
-      <section className="relative py-20 md:py-28 border-y border-white/6 bg-[var(--charcoal)]/40">
-        <Reveal className="mb-8 md:mb-12 px-6 md:px-10 mx-auto max-w-7xl">
-          <SectionLabel>05 — Trusted by</SectionLabel>
-        </Reveal>
-        <div className="relative overflow-hidden">
-          <div className="flex whitespace-nowrap" style={{ animation: "marquee 40s linear infinite" }}>
-            {[...brands, ...brands, ...brands].map((b, i) => (
-              <div key={i} className="flex items-center gap-14 px-7">
-                <span className="font-display text-3xl md:text-5xl text-white/40 tracking-wider hover:text-gold transition-colors duration-500">
-                  {b}
-                </span>
-                <span className="text-gold/40 text-2xl">✦</span>
-              </div>
-            ))}
-          </div>
-          <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background to-transparent" />
-          <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background to-transparent" />
-        </div>
-      </section>
-
-      {/* ================= TESTIMONIALS ================= */}
-      <section className="relative py-28 md:py-40 px-6 md:px-10">
-        <div className="mx-auto max-w-7xl">
-          <Reveal><SectionLabel>06 — Words</SectionLabel></Reveal>
-          <Reveal delay={0.05}>
-            <h2 className="mt-6 font-display text-5xl md:text-7xl font-light leading-[0.95]">
-              Kind <span className="italic text-gold">Words</span>
-            </h2>
-          </Reveal>
-
-          <div className="mt-14 grid md:grid-cols-3 gap-5">
-            {testimonials.map((t, i) => (
-              <Reveal key={i} delay={i * 0.1}>
-                <figure className="glass rounded-xl p-8 md:p-10 h-full flex flex-col justify-between hover:border-gold/30 transition-colors duration-700">
-                  <span className="font-display text-6xl text-gold leading-none">"</span>
-                  <blockquote className="mt-4 font-display text-xl md:text-2xl leading-snug text-white/90 font-light italic">
-                    {t.quote}
-                  </blockquote>
-                  <figcaption className="mt-8 text-[10px] tracking-luxury text-white/50">
-                    — {t.author}
-                  </figcaption>
-                </figure>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <div className="gold-hairline mx-auto max-w-6xl" />
+
 
       {/* ================= CONTACT ================= */}
       <section id="contact" className="relative py-28 md:py-40 px-6 md:px-10">
