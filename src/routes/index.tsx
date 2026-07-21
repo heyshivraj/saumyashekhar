@@ -529,28 +529,32 @@ function Portfolio() {
         <div className="mx-auto max-w-5xl text-center">
           <Reveal><div className="flex justify-center"><SectionLabel>05 — Contact</SectionLabel></div></Reveal>
           <Reveal delay={0.05}>
-            <h2 className="mt-8 font-display text-6xl md:text-9xl font-light leading-[0.9]">
-              Book <span className="italic text-gold">Me</span>
+            <h2 className="mt-8 font-display text-5xl sm:text-6xl md:text-9xl font-light leading-[0.9]">
+              Let's <span className="italic text-gold">Create</span>
             </h2>
           </Reveal>
           <Reveal delay={0.15}>
-            <p className="mt-8 text-white/60 max-w-lg mx-auto font-light">
-              For campaigns, editorials and brand collaborations — reach out directly. Response within 24 hours.
+            <p className="mt-8 text-sm md:text-base text-white/55 max-w-md mx-auto font-light leading-relaxed">
+              For campaigns, editorials and collaborations — enquiries answered within 24 hours.
             </p>
           </Reveal>
 
           <Reveal delay={0.25}>
             <div className="mt-12 inline-flex flex-col items-center">
-              <div className="text-[10px] tracking-luxury text-gold">Direct email</div>
-              <a href={`mailto:${EMAIL}`} className="mt-3 font-display text-2xl md:text-5xl text-white hover:text-gold transition-colors break-all">
+              <div className="text-[10px] tracking-luxury text-gold">Direct enquiries</div>
+              <a
+                href={`mailto:${EMAIL}`}
+                className="mt-3 font-display text-2xl sm:text-3xl md:text-5xl text-white hover:text-gold transition-colors break-all"
+              >
                 {EMAIL}
               </a>
             </div>
           </Reveal>
 
           <Reveal delay={0.35}>
-            <div className="mt-14 flex flex-wrap justify-center gap-3">
-              <ContactBtn href={`mailto:${EMAIL}`} icon={<Mail className="h-4 w-4" />} label="Email Me" primary />
+            <div className="mt-12 md:mt-14 flex flex-wrap justify-center gap-2.5 md:gap-3">
+              <ContactBtn href={`mailto:${EMAIL}`} icon={<Mail className="h-4 w-4" />} label="Email" primary />
+              <ContactBtn href={WHATSAPP} icon={<WhatsAppIcon className="h-4 w-4" />} label="WhatsApp" />
               <ContactBtn href={INSTA} icon={<Instagram className="h-4 w-4" />} label="Instagram" />
             </div>
           </Reveal>
