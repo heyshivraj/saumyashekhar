@@ -514,7 +514,7 @@ function Portfolio() {
       {/* ================= CONTACT ================= */}
       <section id="contact" className="relative py-28 md:py-40 px-6 md:px-10">
         <div className="mx-auto max-w-5xl text-center">
-          <Reveal><div className="flex justify-center"><SectionLabel>07 — Contact</SectionLabel></div></Reveal>
+          <Reveal><div className="flex justify-center"><SectionLabel>05 — Contact</SectionLabel></div></Reveal>
           <Reveal delay={0.05}>
             <h2 className="mt-8 font-display text-6xl md:text-9xl font-light leading-[0.9]">
               Book <span className="italic text-gold">Me</span>
@@ -528,22 +528,16 @@ function Portfolio() {
 
           <Reveal delay={0.25}>
             <div className="mt-12 inline-flex flex-col items-center">
-              <div className="text-[10px] tracking-luxury text-gold">Direct line</div>
-              <a href={`tel:${PHONE}`} className="mt-3 font-display text-3xl md:text-5xl text-white hover:text-gold transition-colors">
-                {PHONE_DISPLAY}
+              <div className="text-[10px] tracking-luxury text-gold">Direct email</div>
+              <a href={`mailto:${EMAIL}`} className="mt-3 font-display text-2xl md:text-5xl text-white hover:text-gold transition-colors break-all">
+                {EMAIL}
               </a>
             </div>
           </Reveal>
 
           <Reveal delay={0.35}>
             <div className="mt-14 flex flex-wrap justify-center gap-3">
-              <ContactBtn href={`tel:${PHONE}`} icon={<Phone className="h-4 w-4" />} label="Call Now" primary />
-              <ContactBtn
-                href={`https://wa.me/91${PHONE}`}
-                icon={<MessageCircle className="h-4 w-4" />}
-                label="WhatsApp"
-              />
-              <ContactBtn href={`mailto:${EMAIL}`} icon={<Mail className="h-4 w-4" />} label="Email" />
+              <ContactBtn href={`mailto:${EMAIL}`} icon={<Mail className="h-4 w-4" />} label="Email Me" primary />
               <ContactBtn href={INSTA} icon={<Instagram className="h-4 w-4" />} label="Instagram" />
             </div>
           </Reveal>
@@ -560,11 +554,8 @@ function Portfolio() {
             © {new Date().getFullYear()} — All Rights Reserved
           </div>
           <div className="flex items-center gap-3 order-2 md:order-3">
-            <a href={INSTA} className="glass h-9 w-9 rounded-full flex items-center justify-center hover:border-gold/50 transition-colors">
+            <a href={INSTA} target="_blank" rel="noopener noreferrer" className="glass h-9 w-9 rounded-full flex items-center justify-center hover:border-gold/50 transition-colors">
               <Instagram className="h-3.5 w-3.5" />
-            </a>
-            <a href={`https://wa.me/91${PHONE}`} className="glass h-9 w-9 rounded-full flex items-center justify-center hover:border-gold/50 transition-colors">
-              <MessageCircle className="h-3.5 w-3.5" />
             </a>
             <a href={`mailto:${EMAIL}`} className="glass h-9 w-9 rounded-full flex items-center justify-center hover:border-gold/50 transition-colors">
               <Mail className="h-3.5 w-3.5" />
