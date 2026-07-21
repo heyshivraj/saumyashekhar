@@ -258,15 +258,15 @@ function Portfolio() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-transparent to-black/40" />
 
         {/* Content */}
-        <div className="relative z-10 h-full flex flex-col justify-end pb-24 md:pb-32">
+        <div className="relative z-10 h-full flex flex-col justify-end pb-28 md:pb-36">
           <div className="mx-auto w-full max-w-7xl px-6 md:px-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 1.8 }}
-              className="mb-6"
+              className="mb-5 md:mb-6"
             >
-              <SectionLabel>Portfolio · 2026</SectionLabel>
+              <SectionLabel>Portfolio — MMXXVI</SectionLabel>
             </motion.div>
 
             <div className="overflow-hidden">
@@ -274,7 +274,7 @@ function Portfolio() {
                 initial={{ y: "110%" }}
                 animate={{ y: "0%" }}
                 transition={{ duration: 1.1, delay: 1.9, ease: [0.22, 1, 0.36, 1] }}
-                className="font-display text-[18vw] md:text-[10vw] leading-[0.85] font-light uppercase"
+                className="font-display text-[17vw] md:text-[10vw] leading-[0.85] font-light uppercase tracking-[-0.02em]"
               >
                 Saumya
               </motion.h1>
@@ -284,7 +284,7 @@ function Portfolio() {
                 initial={{ y: "110%" }}
                 animate={{ y: "0%" }}
                 transition={{ duration: 1.1, delay: 2.05, ease: [0.22, 1, 0.36, 1] }}
-                className="font-display text-[18vw] md:text-[10vw] leading-[0.85] font-light uppercase italic text-white/95"
+                className="font-display text-[17vw] md:text-[10vw] leading-[0.85] font-light uppercase italic text-white/95 tracking-[-0.02em]"
               >
                 Shekhar
               </motion.h1>
@@ -294,19 +294,19 @@ function Portfolio() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 2.4 }}
-              className="mt-8 max-w-xl"
+              className="mt-7 md:mt-9 max-w-xl"
             >
               <div className="flex items-center gap-3">
-                <span className="h-px w-10 bg-gold" />
-                <p className="text-xs md:text-sm tracking-[0.35em] uppercase text-white/85">
-                  Professional Fashion Model
+                <span className="h-px w-8 md:w-10 bg-gold" />
+                <p className="text-[10px] md:text-xs tracking-[0.4em] uppercase text-white/85">
+                  Fashion Model
                 </p>
               </div>
-              <p className="mt-3 text-[11px] tracking-[0.4em] uppercase text-white/50">
-                Commercial · Print · Editorial
+              <p className="mt-3 text-[10px] md:text-[11px] tracking-[0.45em] uppercase text-white/45">
+                Editorial · Campaign · Runway
               </p>
-              <p className="mt-6 text-sm md:text-base text-white/70 leading-relaxed max-w-md font-light">
-                Available for fashion campaigns, commercial shoots and brand collaborations worldwide.
+              <p className="mt-5 md:mt-6 text-[13px] md:text-base text-white/65 leading-relaxed max-w-md font-light">
+                A study in stillness and form — represented for campaigns, couture and worldwide collaborations.
               </p>
             </motion.div>
 
@@ -314,11 +314,16 @@ function Portfolio() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 2.6 }}
-              className="mt-10 flex flex-wrap gap-3"
+              className="mt-8 md:mt-10 flex flex-wrap items-center gap-2.5 md:gap-3"
             >
               <LuxButton primary onClick={() => scrollTo("contact")}>Book Now</LuxButton>
-              <LuxButton onClick={() => scrollTo("contact")}>Contact</LuxButton>
-              <LuxButton onClick={() => scrollTo("portfolio")}>View Portfolio</LuxButton>
+              <LuxButton
+                onClick={() => window.open(WHATSAPP, "_blank", "noopener,noreferrer")}
+                icon={<WhatsAppIcon className="h-3.5 w-3.5" />}
+              >
+                WhatsApp
+              </LuxButton>
+              <LuxButton onClick={() => scrollTo("portfolio")}>Portfolio</LuxButton>
             </motion.div>
           </div>
         </div>
