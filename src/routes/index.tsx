@@ -15,6 +15,12 @@ import {
   ArrowUp,
   X,
   ChevronDown,
+  Ruler,
+  Eye,
+  Scissors,
+  Sparkles,
+  Globe2,
+  Languages,
 } from "lucide-react";
 
 import heroAsset from "@/assets/hero.jpg.asset.json";
