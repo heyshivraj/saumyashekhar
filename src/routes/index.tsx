@@ -446,32 +446,52 @@ function Portfolio() {
       <div className="gold-hairline mx-auto max-w-6xl" />
 
       {/* ================= MEASUREMENTS ================= */}
-      <section className="relative py-28 md:py-40 px-6 md:px-10">
+      <section id="details" className="relative py-28 md:py-40 px-6 md:px-10">
         <div className="mx-auto max-w-7xl">
-          <Reveal><SectionLabel>03 — Measurements</SectionLabel></Reveal>
-          <Reveal delay={0.05}>
-            <h2 className="mt-6 font-display text-5xl md:text-7xl font-light leading-[0.95]">
-              The <span className="italic text-gold">Details</span>
-            </h2>
-          </Reveal>
+          <div className="flex items-end justify-between flex-wrap gap-6">
+            <div>
+              <Reveal><SectionLabel>03 — Model Details</SectionLabel></Reveal>
+              <Reveal delay={0.05}>
+                <h2 className="mt-6 font-display text-5xl md:text-7xl font-light leading-[0.95]">
+                  The <span className="italic text-gold">Details</span>
+                </h2>
+              </Reveal>
+            </div>
+            <Reveal delay={0.1}>
+              <p className="text-sm text-white/50 max-w-xs font-light">
+                A precise measure of presence — the essentials that define the frame.
+              </p>
+            </Reveal>
+          </div>
 
           <div className="mt-14 grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-            {measurements.map((m, i) => (
-              <Reveal key={m.label} delay={i * 0.06}>
-                <div className="relative rounded-lg border border-white/8 bg-[var(--charcoal)] p-6 md:p-8 h-full overflow-hidden group hover:border-gold/40 transition-all duration-700">
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-gradient-to-br from-gold/8 to-transparent" />
-                  <div className="relative">
-                    <div className="text-[10px] tracking-luxury text-gold">{m.label}</div>
-                    <div className="mt-4 font-display text-3xl md:text-4xl text-white font-light">
-                      {m.value}
+            {measurements.map((m, i) => {
+              const Icon = m.Icon;
+              return (
+                <Reveal key={m.label} delay={i * 0.06}>
+                  <div className="relative rounded-xl border border-white/10 bg-[var(--charcoal)] p-6 md:p-8 h-full overflow-hidden group hover:border-gold/40 transition-all duration-700">
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-gradient-to-br from-gold/10 to-transparent" />
+                    <div className="relative flex flex-col h-full">
+                      <div className="flex items-center justify-between">
+                        <div className="text-[10px] tracking-luxury text-gold">{m.label}</div>
+                        <div className="h-9 w-9 rounded-full border border-white/10 flex items-center justify-center text-white/60 group-hover:text-gold group-hover:border-gold/40 transition-colors duration-500">
+                          <Icon className="h-4 w-4" strokeWidth={1.25} />
+                        </div>
+                      </div>
+                      <div className="mt-6 md:mt-8 font-display text-2xl md:text-4xl text-white font-light leading-tight">
+                        {m.value}
+                      </div>
+                      <div className="mt-4 h-px w-8 bg-gold/40 group-hover:w-16 transition-all duration-700" />
                     </div>
                   </div>
-                </div>
-              </Reveal>
-            ))}
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </section>
+
+
 
       <div className="gold-hairline mx-auto max-w-6xl" />
 
