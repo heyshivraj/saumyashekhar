@@ -50,12 +50,12 @@ const galleryItems = [
 ];
 
 const measurements = [
-  { label: "Height", value: "5'11\"" },
-  { label: "Hair", value: "Black" },
-  { label: "Eyes", value: "Brown" },
-  { label: "Nationality", value: "Indian" },
-  { label: "Languages", value: "English / Hindi" },
-  { label: "Age", value: "18" },
+  { label: "Height", value: "5'11\"", Icon: Ruler },
+  { label: "Hair Color", value: "Black", Icon: Scissors },
+  { label: "Eye Color", value: "Dark Brown", Icon: Eye },
+  { label: "Skin Tone", value: "Light Brown", Icon: Sparkles },
+  { label: "Nationality", value: "Indian", Icon: Globe2 },
+  { label: "Languages", value: "English · Hindi", Icon: Languages },
 ];
 
 const aboutCards = [
