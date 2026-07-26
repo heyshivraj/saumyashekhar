@@ -15,6 +15,12 @@ import {
   ArrowUp,
   X,
   ChevronDown,
+  Ruler,
+  Eye,
+  Scissors,
+  Sparkles,
+  Globe2,
+  Languages,
 } from "lucide-react";
 
 import heroAsset from "@/assets/hero.jpg.asset.json";
@@ -32,17 +38,7 @@ export const Route = createFileRoute("/")({
 });
 
 const EMAIL = "shekhar.saumya27@gmail.com";
-const WHATSAPP = "https://wa.me/917843031847";
 const INSTA = "https://www.instagram.com/_saumyashekhar__?igsh=ODUwYXZkMzF6bDgx";
-
-// Inline WhatsApp glyph (kept minimal, on-brand)
-function WhatsAppIcon({ className = "h-4 w-4" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className={className}>
-      <path d="M12.04 2.5c-5.25 0-9.5 4.25-9.5 9.5 0 1.67.44 3.29 1.28 4.72L2.5 21.5l4.94-1.29a9.47 9.47 0 0 0 4.6 1.18h.01c5.24 0 9.49-4.25 9.49-9.5 0-2.54-.99-4.92-2.78-6.71A9.42 9.42 0 0 0 12.04 2.5Zm0 17.33h-.01a7.86 7.86 0 0 1-4.01-1.1l-.29-.17-2.93.77.78-2.86-.19-.29a7.87 7.87 0 0 1-1.21-4.19c0-4.36 3.55-7.9 7.91-7.9 2.11 0 4.1.82 5.59 2.32a7.85 7.85 0 0 1 2.32 5.6c0 4.35-3.55 7.82-7.96 7.82Zm4.54-5.87c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.98-.14.16-.29.18-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.13-.14.16-.25.25-.41.08-.16.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42-.14 0-.31-.02-.48-.02s-.44.06-.67.31c-.23.25-.87.85-.87 2.08 0 1.23.89 2.41 1.01 2.58.13.16 1.75 2.67 4.24 3.74.59.25 1.05.4 1.41.52.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.08.15-1.18-.06-.11-.23-.17-.48-.29Z"/>
-    </svg>
-  );
-}
 
 const galleryItems = [
   { src: p3Asset.url, category: "Editorial", tall: true },
@@ -54,12 +50,12 @@ const galleryItems = [
 ];
 
 const measurements = [
-  { label: "Height", value: "5'11\"" },
-  { label: "Hair", value: "Black" },
-  { label: "Eyes", value: "Brown" },
-  { label: "Nationality", value: "Indian" },
-  { label: "Languages", value: "English / Hindi" },
-  { label: "Age", value: "18" },
+  { label: "Height", value: "5'11\"", Icon: Ruler },
+  { label: "Hair Color", value: "Black", Icon: Scissors },
+  { label: "Eye Color", value: "Dark Brown", Icon: Eye },
+  { label: "Skin Tone", value: "Light Brown", Icon: Sparkles },
+  { label: "Nationality", value: "Indian", Icon: Globe2 },
+  { label: "Languages", value: "English · Hindi", Icon: Languages },
 ];
 
 const aboutCards = [
@@ -317,13 +313,13 @@ function Portfolio() {
               className="mt-8 md:mt-10 flex flex-wrap items-center gap-2.5 md:gap-3"
             >
               <LuxButton primary onClick={() => scrollTo("contact")}>Book Now</LuxButton>
+              <LuxButton onClick={() => scrollTo("portfolio")}>View Portfolio</LuxButton>
               <LuxButton
-                onClick={() => window.open(WHATSAPP, "_blank", "noopener,noreferrer")}
-                icon={<WhatsAppIcon className="h-3.5 w-3.5" />}
+                onClick={() => window.open(INSTA, "_blank", "noopener,noreferrer")}
+                icon={<Instagram className="h-3.5 w-3.5" />}
               >
-                WhatsApp
+                Instagram
               </LuxButton>
-              <LuxButton onClick={() => scrollTo("portfolio")}>Portfolio</LuxButton>
             </motion.div>
           </div>
         </div>
@@ -450,32 +446,52 @@ function Portfolio() {
       <div className="gold-hairline mx-auto max-w-6xl" />
 
       {/* ================= MEASUREMENTS ================= */}
-      <section className="relative py-28 md:py-40 px-6 md:px-10">
+      <section id="details" className="relative py-28 md:py-40 px-6 md:px-10">
         <div className="mx-auto max-w-7xl">
-          <Reveal><SectionLabel>03 — Measurements</SectionLabel></Reveal>
-          <Reveal delay={0.05}>
-            <h2 className="mt-6 font-display text-5xl md:text-7xl font-light leading-[0.95]">
-              The <span className="italic text-gold">Details</span>
-            </h2>
-          </Reveal>
+          <div className="flex items-end justify-between flex-wrap gap-6">
+            <div>
+              <Reveal><SectionLabel>03 — Model Details</SectionLabel></Reveal>
+              <Reveal delay={0.05}>
+                <h2 className="mt-6 font-display text-5xl md:text-7xl font-light leading-[0.95]">
+                  The <span className="italic text-gold">Details</span>
+                </h2>
+              </Reveal>
+            </div>
+            <Reveal delay={0.1}>
+              <p className="text-sm text-white/50 max-w-xs font-light">
+                A precise measure of presence — the essentials that define the frame.
+              </p>
+            </Reveal>
+          </div>
 
           <div className="mt-14 grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-            {measurements.map((m, i) => (
-              <Reveal key={m.label} delay={i * 0.06}>
-                <div className="relative rounded-lg border border-white/8 bg-[var(--charcoal)] p-6 md:p-8 h-full overflow-hidden group hover:border-gold/40 transition-all duration-700">
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-gradient-to-br from-gold/8 to-transparent" />
-                  <div className="relative">
-                    <div className="text-[10px] tracking-luxury text-gold">{m.label}</div>
-                    <div className="mt-4 font-display text-3xl md:text-4xl text-white font-light">
-                      {m.value}
+            {measurements.map((m, i) => {
+              const Icon = m.Icon;
+              return (
+                <Reveal key={m.label} delay={i * 0.06}>
+                  <div className="relative rounded-xl border border-white/10 bg-[var(--charcoal)] p-6 md:p-8 h-full overflow-hidden group hover:border-gold/40 transition-all duration-700">
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-gradient-to-br from-gold/10 to-transparent" />
+                    <div className="relative flex flex-col h-full">
+                      <div className="flex items-center justify-between">
+                        <div className="text-[10px] tracking-luxury text-gold">{m.label}</div>
+                        <div className="h-9 w-9 rounded-full border border-white/10 flex items-center justify-center text-white/60 group-hover:text-gold group-hover:border-gold/40 transition-colors duration-500">
+                          <Icon className="h-4 w-4" strokeWidth={1.25} />
+                        </div>
+                      </div>
+                      <div className="mt-6 md:mt-8 font-display text-2xl md:text-4xl text-white font-light leading-tight">
+                        {m.value}
+                      </div>
+                      <div className="mt-4 h-px w-8 bg-gold/40 group-hover:w-16 transition-all duration-700" />
                     </div>
                   </div>
-                </div>
-              </Reveal>
-            ))}
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </section>
+
+
 
       <div className="gold-hairline mx-auto max-w-6xl" />
 
@@ -554,7 +570,7 @@ function Portfolio() {
           <Reveal delay={0.35}>
             <div className="mt-12 md:mt-14 flex flex-wrap justify-center gap-2.5 md:gap-3">
               <ContactBtn href={`mailto:${EMAIL}`} icon={<Mail className="h-4 w-4" />} label="Email" primary />
-              <ContactBtn href={WHATSAPP} icon={<WhatsAppIcon className="h-4 w-4" />} label="WhatsApp" />
+              
               <ContactBtn href={INSTA} icon={<Instagram className="h-4 w-4" />} label="Instagram" />
             </div>
           </Reveal>
