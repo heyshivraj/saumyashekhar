@@ -313,13 +313,13 @@ function Portfolio() {
               className="mt-8 md:mt-10 flex flex-wrap items-center gap-2.5 md:gap-3"
             >
               <LuxButton primary onClick={() => scrollTo("contact")}>Book Now</LuxButton>
+              <LuxButton onClick={() => scrollTo("portfolio")}>View Portfolio</LuxButton>
               <LuxButton
-                onClick={() => window.open(WHATSAPP, "_blank", "noopener,noreferrer")}
-                icon={<WhatsAppIcon className="h-3.5 w-3.5" />}
+                onClick={() => window.open(INSTA, "_blank", "noopener,noreferrer")}
+                icon={<Instagram className="h-3.5 w-3.5" />}
               >
-                WhatsApp
+                Instagram
               </LuxButton>
-              <LuxButton onClick={() => scrollTo("portfolio")}>Portfolio</LuxButton>
             </motion.div>
           </div>
         </div>
