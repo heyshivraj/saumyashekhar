@@ -550,7 +550,7 @@ function Portfolio() {
           <Reveal delay={0.35}>
             <div className="mt-12 md:mt-14 flex flex-wrap justify-center gap-2.5 md:gap-3">
               <ContactBtn href={`mailto:${EMAIL}`} icon={<Mail className="h-4 w-4" />} label="Email" primary />
-              <ContactBtn href={WHATSAPP} icon={<WhatsAppIcon className="h-4 w-4" />} label="WhatsApp" />
+              
               <ContactBtn href={INSTA} icon={<Instagram className="h-4 w-4" />} label="Instagram" />
             </div>
           </Reveal>
