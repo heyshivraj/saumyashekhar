@@ -23,9 +23,25 @@ import {
   Languages,
 } from "lucide-react";
 
-const hero = "/images/saumya-hero.jpg";
+const hero = "./images/saumya-hero.jpg";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Saumya Shekhar | Fashion Model" },
+      {
+        name: "description",
+        content: "Official portfolio of Saumya Shekhar, an Indian fashion model available for editorial, commercial, print, and campaign work.",
+      },
+      { property: "og:title", content: "Saumya Shekhar | Fashion Model" },
+      {
+        property: "og:description",
+        content: "Official fashion portfolio of Saumya Shekhar.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Portfolio,
 });
 
@@ -33,12 +49,12 @@ const EMAIL = "shekhar.saumya27@gmail.com";
 const INSTA = "https://www.instagram.com/_saumyashekhar__?igsh=ODUwYXZkMzF6bDgx";
 
 const galleryItems = [
-  { src: "/images/saumya-portfolio-03.jpg", category: "Editorial", tall: true },
-  { src: "/images/saumya-portfolio-02.jpg", category: "Commercial", tall: false },
-  { src: "/images/saumya-portfolio-01.jpg", category: "Runway", tall: true },
-  { src: "/images/saumya-portfolio-04.jpg", category: "Print", tall: false },
-  { src: "/images/saumya-portfolio-06.jpg", category: "Fashion", tall: true },
-  { src: "/images/saumya-portfolio-05.jpg", category: "Lookbook", tall: false },
+  { src: "./images/saumya-portfolio-03.jpg", category: "Editorial", tall: true },
+  { src: "./images/saumya-portfolio-02.jpg", category: "Commercial", tall: false },
+  { src: "./images/saumya-portfolio-01.jpg", category: "Runway", tall: true },
+  { src: "./images/saumya-portfolio-04.jpg", category: "Print", tall: false },
+  { src: "./images/saumya-portfolio-06.jpg", category: "Fashion", tall: true },
+  { src: "./images/saumya-portfolio-05.jpg", category: "Lookbook", tall: false },
 ];
 
 const measurements = [
