@@ -23,15 +23,7 @@ import {
   Languages,
 } from "lucide-react";
 
-import heroAsset from "@/assets/hero.jpg.asset.json";
-import p1Asset from "@/assets/p1.jpg.asset.json";
-import p2Asset from "@/assets/p2.jpg.asset.json";
-import p3Asset from "@/assets/p3.jpg.asset.json";
-import p4Asset from "@/assets/p4.jpg.asset.json";
-import p5Asset from "@/assets/p5.jpg.asset.json";
-import p6Asset from "@/assets/p6.jpg.asset.json";
-
-const hero = heroAsset.url;
+const hero = "/images/saumya-hero.jpg";
 
 export const Route = createFileRoute("/")({
   component: Portfolio,
@@ -41,12 +33,12 @@ const EMAIL = "shekhar.saumya27@gmail.com";
 const INSTA = "https://www.instagram.com/_saumyashekhar__?igsh=ODUwYXZkMzF6bDgx";
 
 const galleryItems = [
-  { src: p3Asset.url, category: "Editorial", tall: true },
-  { src: p2Asset.url, category: "Commercial", tall: false },
-  { src: p1Asset.url, category: "Runway", tall: true },
-  { src: p4Asset.url, category: "Print", tall: false },
-  { src: p6Asset.url, category: "Fashion", tall: true },
-  { src: p5Asset.url, category: "Lookbook", tall: false },
+  { src: "/images/saumya-portfolio-03.jpg", category: "Editorial", tall: true },
+  { src: "/images/saumya-portfolio-02.jpg", category: "Commercial", tall: false },
+  { src: "/images/saumya-portfolio-01.jpg", category: "Runway", tall: true },
+  { src: "/images/saumya-portfolio-04.jpg", category: "Print", tall: false },
+  { src: "/images/saumya-portfolio-06.jpg", category: "Fashion", tall: true },
+  { src: "/images/saumya-portfolio-05.jpg", category: "Lookbook", tall: false },
 ];
 
 const measurements = [
