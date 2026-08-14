@@ -1,3 +1,6 @@
 [build]
-  command = "NITRO_PRESET=netlify-static bun run build"
+  # Use the Netlify SSR (functions) preset. The `netlify-static` preset is
+  # currently broken with Vite 8 + Nitro ("rollupOptions.input should not be an
+  # html file when building for SSR").
+  command = "NITRO_PRESET=netlify bun run build"
   publish = "dist"
